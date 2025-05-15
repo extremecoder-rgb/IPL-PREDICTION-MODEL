@@ -1,9 +1,9 @@
-# IPL 2025 Match Prediction Application
+# IPL Match Prediction Application
 
 > **⚠️ Only for learning purpose. The owner will not take any responsibility if misleaded. ⚠️**
 
 ## Project Overview
-This Streamlit-based web application predicts the outcome of IPL 2025 matches using various machine learning models, including Logistic Regression, Random Forest, Support Vector Machine (SVM), and LightGBM. The app also features advanced ensemble strategies for more robust predictions.
+This Streamlit-based web application predicts the outcome of IPL matches using various machine learning models, including Logistic Regression, Random Forest, Support Vector Machine (SVM), and LightGBM. The app also features advanced ensemble strategies for more robust predictions.
 
 ## Features
 - User-friendly interface for inputting match details

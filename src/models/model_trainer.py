@@ -25,7 +25,7 @@ class ModelTrainer:
             'SVM': SVC(probability=True, random_state=42),
             'LightGBM': LGBMClassifier(random_state=42)
         }
-        # Initialize hyperparameters for grid search
+        
         self.param_grids = {
             'Logistic Regression': {
                 'C': [0.01, 0.1, 1, 10, 100],
@@ -55,7 +55,7 @@ class ModelTrainer:
     def load_data(self, X_path, y_path):
         try:
             X = pd.read_csv(X_path)
-            y = pd.read_csv(y_path).iloc[:, 0]  # Assuming target is in the first column
+            y = pd.read_csv(y_path).iloc[:, 0]  
             return X, y
         except Exception as e:
             print(f"Error loading data: {e}")

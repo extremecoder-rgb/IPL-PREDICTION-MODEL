@@ -3,10 +3,7 @@ from data.kaggle_dataset import IPLDatasetManager
 from models.model_trainer import ModelTrainer
 
 def main():
-    # Initialize data manager
     data_manager = IPLDatasetManager()
-    
-    # Download and process data
     print("Downloading IPL dataset...")
     if not data_manager.download_dataset():
         print("\nExiting: Dataset download failed. Please set up Kaggle credentials and try again.")
@@ -15,19 +12,19 @@ def main():
     print("Processing dataset...")
     processed_data = data_manager.load_and_preprocess_data()
     
-    # Save team and venue mappings for the web app
+   
     mappings = data_manager.get_team_mapping()
     
-    # Initialize model trainer
+   
     trainer = ModelTrainer()
     
-    # Train models with hyperparameter tuning
+  
     print("Training models...")
     X = processed_data.drop('target', axis=1)
     y = processed_data['target']
     trained_models = trainer.train_models(X, y, tune_hyperparams=True)
     
-    # Save the trained models
+  
     print("Saving models...")
     trainer.save_models(trained_models)
     
